@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>What's For Dinner</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="css/all.min.css">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+    <header class="navbar">
+        <div class="nav-left">
+            <div class="logo-icon"><i class="fa-solid fa-utensils"></i></div>
+            <div class="logo-text">
+                <h1>What's For Dinner</h1>
+                <p>Your daily meal inspiration</p>
+            </div>
+        </div>
+        <div class="nav-right">
+            <i class="fa-regular fa-bookmark"></i>
+            <i class="fa-solid fa-gear"></i>
+            <div class="profile-pic"></div>
+        </div>
+    </header>
+
+    <main class="card-container">
+        
+        <section class="card-left">
+            <div class="image-wrapper">
+                <img id="meal-img" src="" alt="Meal Image">
+                <div class="rating-badge">
+                    <i class="fa-solid fa-star"></i> <span id="meal-rating"></span> <span class="reviews-count"></span>
+                </div>
+                
+                <div class="time-info-box">
+                    <div class="info-item">
+                        <i class="fa-regular fa-clock icon-prep"></i>
+                        <span>Prep Time</span>
+                        <strong id="prep-time"></strong>
+                    </div>
+                    <div class="info-item">
+                        <i class="fa-solid fa-fire-burner icon-cook"></i>
+                        <span>Cook Time</span>
+                        <strong id="cook-time"></strong>
+                    </div>
+                    <div class="info-item">
+                        <i class="fa-solid fa-users icon-servings"></i>
+                        <span>Servings</span>
+                        <strong id="servings"></strong>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="card-right">
+            <div class="tags-and-actions">
+                <div class="tags">
+                    <span class="tag tag-easy" id="tag-difficulty"></span>
+                    <span class="tag tag-cuisine" id="tag-cuisine"></span>
+                </div>
+                <div class="actions">
+                    <button class="action-btn small-btn"><i class="fa-regular fa-bookmark"></i></button>
+                    <button class="action-btn small-btn"><i class="fa-solid fa-share-nodes"></i></button>
+                </div>
+            </div>
+
+            <h2 id="meal-title"></h2>
+            <p id="meal-desc" class="recipe-desc"></p>
+
+            <div class="tabs">
+                <button class="tab-item active" data-target="ingredients-content"><i class="fa-solid fa-list"></i> Ingredients</button>
+                <button class="tab-item" data-target="instructions-content"><i class="fa-solid fa-bars-staggered"></i> Instructions</button>
+                <button class="tab-item" data-target="nutrition-content"><i class="fa-solid fa-chart-pie"></i> Nutrition</button>
+                <button class="tab-item" data-target="tips-content"><i class="fa-solid fa-lightbulb"></i> Chef's Tips</button>
+            </div>
+
+            <div class="content-wrapper">
+                <div id="ingredients-content" class="tab-content active">
+                    <div class="ingredients-card">
+                        <ul class="ingredients-list" id="ingredients-container"></ul>
+                    </div>
+                </div>
+                <div id="instructions-content" class="tab-content">
+                    <ol class="steps-list" id="steps-container"></ol>
+                </div>
+                <div id="nutrition-content" class="tab-content">
+                    <div class="nutrition-grid" id="nutrition-container"></div>
+                </div>
+                <div id="tips-content" class="tab-content">
+                    <div class="tips-list" id="tips-container"></div>
+                </div>
+            </div>
+
+            <button id="next-recipe-btn" class="cta-btn">
+                <i class="fa-solid fa-shuffle"></i> Try Another Recipe
+            </button>
+        </section>
+
+    </main>
+
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>
